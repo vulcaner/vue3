@@ -62,3 +62,5 @@ npm run lint
 [vite](https://cn.vitejs.dev/guide/env-and-mode.html)
 
 [工具链](https://cn.vuejs.org/guide/scaling-up/tooling.html)
+
+[Element Plus安装](https://element-plus.org/zh-CN/guide/installation.html)
