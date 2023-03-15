@@ -52,9 +52,13 @@ npm run lint
 ```
 
 
+ 
+[Vue 3 迁移指南](https://v3-migration.vuejs.org/zh/)
 
+[Vue 2 和 Vue 3 之间的区别是什么](https://cn.vuejs.org/about/faq.html#what-s-the-difference-between-vue-2-and-vue-3)
  
 [pinia](https://pinia.web3doc.top/core-concepts/#%E4%BD%BF%E7%94%A8-store)
 
 [vite](https://cn.vitejs.dev/guide/env-and-mode.html)
- 
+
+[工具链](https://cn.vuejs.org/guide/scaling-up/tooling.html)
