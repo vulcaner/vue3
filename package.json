@@ -20,7 +20,6 @@
     "element-plus": "^2.3.0",
     "mitt": "^3.0.0",
     "pinia": "^2.0.28",
-    "screenfull": "^6.0.2",
     "vue": "^3.2.45",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.6"
