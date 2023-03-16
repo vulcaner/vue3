@@ -16,14 +16,23 @@
   }
 }
 </style>
+
 <script setup lang="ts">
 import i18n from "../lang";
 // import { useI18n } from 'vue-i18n'
 // import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router'
-import { onMounted, ref, watchEffect } from "vue";
+import { onMounted, ref, watchEffect, nextTick } from "vue";
 // const { t } = useI18n()//t('message.home')
 // const route = useRoute()
 // const router = useRouter()
+// 监听路由变化时更新浏览器标题
+// watch(
+//   () => route.path,
+//   () => {
+//     // setTitleFromRoute()
+//   }
+// )
+// import { useEventListener } from '@vueuse/core'
 const langArr = ref([
   {
     label: "英文",
@@ -36,7 +45,20 @@ const langArr = ref([
 watchEffect(() => {
   console.warn(i18n.global.locale)
 })
+// const echartsResize = () => {
+//   nextTick(() => { })
+// }
+
+
 onMounted(() => {
+  // useEventListener(window, 'resize', echartsResize)
   console.log(i18n.global)
 });
+</script>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  name: 'Ele',
+})
 </script>
