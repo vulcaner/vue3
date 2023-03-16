@@ -32,7 +32,7 @@ import { onMounted, ref, watchEffect, nextTick } from "vue";
 //     // setTitleFromRoute()
 //   }
 // )
-// import { useEventListener } from '@vueuse/core'
+import { useEventListener } from '@vueuse/core'
 const langArr = ref([
   {
     label: "英文",
@@ -45,13 +45,15 @@ const langArr = ref([
 watchEffect(() => {
   console.warn(i18n.global.locale)
 })
-// const echartsResize = () => {
-//   nextTick(() => { })
-// }
+const echartsResize = () => {
+  nextTick(() => {
+    console.log('resizing~');
+   })
+}
 
 
 onMounted(() => {
-  // useEventListener(window, 'resize', echartsResize)
+  useEventListener(window, 'resize', echartsResize)
   console.log(i18n.global)
 });
 </script>
