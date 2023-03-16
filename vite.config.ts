@@ -18,7 +18,7 @@ export default defineConfig(({ command, mode }) => {
   // console.log(env)
   const pluginsArr = mode === "production" ? [visualizer({
     open: true,
-    template: "network",//treemap
+    template: "treemap",
   })] : []
   return {
     plugins: [
@@ -30,7 +30,7 @@ export default defineConfig(({ command, mode }) => {
       }),
       Components({
         resolvers: [ElementPlusResolver()],
-        // dts: false
+        dts: false
       }),
       ...pluginsArr,
     ],
