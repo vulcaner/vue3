@@ -19,8 +19,11 @@
 <script setup lang="ts">
 import i18n from "../lang";
 // import { useI18n } from 'vue-i18n'
+// import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router'
 import { onMounted, ref, watchEffect } from "vue";
 // const { t } = useI18n()//t('message.home')
+// const route = useRoute()
+// const router = useRouter()
 const langArr = ref([
   {
     label: "英文",
