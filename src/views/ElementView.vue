@@ -18,8 +18,9 @@
 </style>
 <script setup lang="ts">
 import i18n from "../lang";
+// import { useI18n } from 'vue-i18n'
 import { onMounted, ref, watchEffect } from "vue";
-
+// const { t } = useI18n()//t('message.home')
 const langArr = ref([
   {
     label: "英文",
