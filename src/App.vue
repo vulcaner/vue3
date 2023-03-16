@@ -17,9 +17,9 @@ import HelloWorld from "./components/HelloWorld.vue";
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/element">element-plus</RouterLink>
+        <RouterLink to="/">{{ $t('message.home', { index: "1、" }) }}</RouterLink>
+        <RouterLink to="/about">{{ $t('message.about', { index: "2、" }) }}</RouterLink>
+        <RouterLink to="/element">{{$t('message.element')}}</RouterLink>
       </nav>
     </div>
   </header>
