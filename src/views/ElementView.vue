@@ -4,6 +4,7 @@
       <el-option v-for="item in langArr" :key="item.value" :label="item.label" :value="item.value" />
     </el-select>
     <p>{{ $i18n.locale }}</p>
+    <h3>Mouse: {{ x }} x {{ y }}</h3>
   </main>
 </template>
 
@@ -32,7 +33,8 @@ import { onMounted, ref, watchEffect, nextTick } from "vue";
 //     // setTitleFromRoute()
 //   }
 // )
-import { useEventListener } from '@vueuse/core'
+import { useEventListener, useMouse } from '@vueuse/core'
+
 const langArr = ref([
   {
     label: "英文",
@@ -48,9 +50,9 @@ watchEffect(() => {
 const echartsResize = () => {
   nextTick(() => {
     console.log('resizing~');
-   })
+  })
 }
-
+const { x, y } = useMouse()
 
 onMounted(() => {
   useEventListener(window, 'resize', echartsResize)

@@ -42,6 +42,7 @@ export default defineConfig(({ command, mode }) => {
     // https://cn.vitejs.dev/config/shared-options.html#base
     base: "/",
     build: {
+      outDir: "docs",
       sourcemap: true,
       reportCompressedSize: true,
     },
