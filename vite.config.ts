@@ -40,10 +40,10 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     // https://cn.vitejs.dev/config/shared-options.html#base
-    base: "/vue3/",
+    base: "/vue3",
     build: {
       outDir: "docs",
-      sourcemap: true,
+      sourcemap: false,
       reportCompressedSize: true,
     },
   }
