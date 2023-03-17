@@ -15,7 +15,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   console.log(mode)
-  // console.log(env)
+  console.log(env)
   const pluginsArr = mode === "production" ? [visualizer({
     open: true,
     template: "treemap",
@@ -40,9 +40,9 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     // https://cn.vitejs.dev/config/shared-options.html#base
-    base: env.BASE_URL || "/",
+    base: env.BASE_URL,
     build: {
-      outDir: "docs",
+      outDir: mode === "production" ? "docs" : "dist",
       sourcemap: false,
       reportCompressedSize: true,
     },
