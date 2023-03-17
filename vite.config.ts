@@ -13,7 +13,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
-  // const env = loadEnv(mode, process.cwd(), '')
+  const env = loadEnv(mode, process.cwd(), '')
   console.log(mode)
   // console.log(env)
   const pluginsArr = mode === "production" ? [visualizer({
@@ -40,7 +40,7 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     // https://cn.vitejs.dev/config/shared-options.html#base
-    base: "/",
+    base: env.BASE_URL || "/",
     build: {
       outDir: "docs",
       sourcemap: false,
