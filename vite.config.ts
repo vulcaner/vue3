@@ -40,7 +40,7 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     // https://cn.vitejs.dev/config/shared-options.html#base
-    base: "/vue3/",
+    base: "/",
     build: {
       outDir: "docs",
       sourcemap: false,
