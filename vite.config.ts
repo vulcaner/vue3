@@ -15,7 +15,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   console.log(mode)
-  console.log(env)
+  // console.log(env)
   const pluginsArr = mode === "production" ? [visualizer({
     open: true,
     template: "treemap",
